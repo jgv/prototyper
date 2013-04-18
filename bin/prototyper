@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/prototyper'
+require "pathname"
+bin_file = Pathname.new(__FILE__).realpath
+
+$:.unshift File.expand_path("../../lib", bin_file)
 
 if ARGV.empty?
   puts "Prototyper requires an arguemnt, which will be the name of your new project directory"

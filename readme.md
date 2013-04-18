@@ -1,6 +1,6 @@
 # Prototyper
 
-Prototyper is a simple commandline tool I use to set up a basic Sinatra application. Sinatra is useful for prototyping ideas but also requires a bunch of boilerplate. This gem is designed to get the boring stuff out of the way when you just want to bang and idea out. The Sintara installtion provided is good to go on Heroku.
+Prototyper is a simple commandline tool I use to set up a basic Sinatra application. Sinatra is useful for prototyping ideas but also requires a bunch of boilerplate. This gem is designed to get the boring stuff out of the way when you just want to bang an idea out. The Sintara installtion provided is good to go on Heroku.
 
 ## Installation
 

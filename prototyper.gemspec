@@ -1,6 +1,6 @@
 require File.expand_path('../lib/prototyper/version', __FILE__)
 
-Gem::Specificaiton.new do |s|
+Gem::Specification.new do |s|
 
   s.name = 'prototyper'
   s.version = Prototyper::VERSION
@@ -11,7 +11,7 @@ Gem::Specificaiton.new do |s|
   s.summary = 'Set up some boilerplate'
   s.description = 'Set up Sinatra boilerplate the way I like it. Useful for prototyping ideas.'
   s.files = `git ls-files`.split("\n")
-  s.test_file = 'test/unit/blue_eyes.rb'
+  s.test_file = 'test/unit/prototyper.rb'
   s.require_paths = ['lib', 'bin']
   s.executables = ['prototyper']
 

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/prototyper'
+
+if ARGV.empty?
+  puts "Prototyper requires an arguemnt, which will be the name of your new project directory"
+elsif Dir.exists?(Dir.pwd + "/" + ARGV.first)
+  puts "That directory already exists."
+else
+  Prototyper.generate(ARGV.first)
+end

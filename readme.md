@@ -15,7 +15,24 @@ or in your Gemfile: `gem 'prototyper'`
 $ prototyper coolproject
 ```
 
-This will create a new Sinatra project relative to your working directory.
+This will create a new Sinatra project relative to your working directory. It will look something like this:
+
+```
+.
+├── Gemfile
+├── Procfile
+├── app.rb
+├── assets
+│   ├── javascripts
+│   │   ├── application.js
+│   │   └── html5shiv.js
+│   └── stylesheets
+│       └── application.css
+├── config.ru
+├── generator.rb
+└── views
+    └── index.erb
+```
 
 ## Tests
 

@@ -34,7 +34,7 @@ This will create a new Sinatra project relative to your working directory. It wi
     └── index.erb
 ```
 
-You will now have a new Sinatra app running on port 5000 by simply typing `foreman start` in your new project directory.
+You will now have a new Sinatra app running on port 5000 by simply typing `bundle install && foreman start` in your new project directory.
 
 ## Tests
 

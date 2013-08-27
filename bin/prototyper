@@ -15,18 +15,20 @@ options['type'] = :html # set default
 
 OptionParser.new do |opts|
 
+  opts.banner = "Usage: prototyper [project_title] [options]"
+
   opts.on("--type [TYPE]", [:sinatra, :html],
-    "Select scaffolding type (sinatra, html)") do |t|
+    "Select scaffolding type (sinatra, html). Default is HTML.") do |t|
     options['type'] = t
   end
 
   opts.on("--html",
-    "Generate HTML scaffolding") do |t|
+    "Generate HTML scaffolding. Shortcut for --type html") do |t|
     options['type'] = :html
   end
 
   opts.on("--sinatra",
-    "Generate Sinatra scaffolding") do |t|
+    "Generate Sinatra scaffolding. Shortcut for --type sinatra.") do |t|
     options['type'] = :sinatra
   end
 

@@ -1,6 +1,6 @@
 # Prototyper
 
-Prototyper is a simple commandline tool I use to set up a basic Sinatra application. Sinatra is useful for prototyping ideas but also requires a bunch of boilerplate. This gem is designed to get the boring stuff out of the way when you just want to bang an idea out. The Sintara installtion provided is good to go on Heroku.
+Prototyper is a simple commandline tool that sets up a basic web application. This gem is designed to get scaffolding a project out of the way. Currently it provides two different project types: HTML and Sinatra. The Sintara installtion provided is good to go on Heroku.
 
 ## Installation
 
@@ -15,7 +15,20 @@ or in your Gemfile: `gem 'prototyper'`
 $ prototyper coolproject
 ```
 
-This will create a new Sinatra project relative to your working directory. It will look something like this:
+This will create a new HTML project relative to your working directory. It will look something like this:
+
+```
+.
+├── assets
+│   ├── javascripts
+│   │   └── application.js
+│   └── stylesheets
+│       └── application.css
+└── index.html
+```
+
+Instead of HTML, you may choose to scaffold a Sinatra app by passing the option `--type sinatra`. This will generate an app that looks like so:
+
 
 ```
 .
@@ -34,14 +47,24 @@ This will create a new Sinatra project relative to your working directory. It wi
     └── index.erb
 ```
 
-You will now have a new Sinatra app running on port 5000 by simply typing `foreman start` in your new project directory.
+## Options
+
+```
+$ protoyper --help
+
+Usage: prototyper [projectname] [options]
+        --type [TYPE]                Select scaffolding type (sinatra, html)
+        --html                       Generate HTML scaffolding
+        --sinatra                    Generate Sinatra scaffolding
+```
+
 
 ## Tests
 
 Run tests with minitest.
 
 ``` bash
-$ ruby test/unit/prototyper.rb
+$ rake test
 ```
 
 **License: MIT**

@@ -1,20 +1,12 @@
 require 'fileutils'
-require File.join(File.dirname(__FILE__), 'templates', 'sinatra', 'generator')
 
 module Prototyper
   class << self
 
-    def generate(name)
-      files = SinatraGenerator.generate
-      FileUtils.mkdir(name)
-      files.each do |path, contents|
-        path = name + "/" + path
-        FileUtils.mkdir_p(File.dirname(path))
-        File.open(path, 'a') do |file|
-          file.puts(contents)
-        end
-      end
-      puts "done! just type 'cd #{name}' and start your server!"
+    def generate(name, opts={})
+      dir = FileUtils.mkdir(name)
+      FileUtils.cp_r Dir["lib/templates/#{opts[:type].to_s}/*"], dir, :preserve => true, :verbose => true
+      puts "done!"
     end
 
   end

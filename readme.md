@@ -58,7 +58,6 @@ Usage: prototyper [projectname] [options]
         --sinatra                    Generate Sinatra scaffolding
 ```
 
-
 ## Tests
 
 Run tests with minitest.

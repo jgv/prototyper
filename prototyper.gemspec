@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/jgv/prototyper'
   s.rubyforge_project = 'prototyper'
   s.summary = 'Set up some boilerplate'
-  s.description = 'Set up Sinatra boilerplate the way I like it. Useful for prototyping ideas.'
+  s.description = 'Scaffold simple projects from the command line.'
   s.files = `git ls-files`.split("\n")
   s.test_file = 'test/unit/prototyper.rb'
   s.require_paths = ['lib', 'bin']

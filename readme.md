@@ -1,3 +1,4 @@
+[![Build Status](https://secure.travis-ci.org/jgv/prototyper.png)](http://travis-ci.org/jgv/prototyper)
 # Prototyper
 
 Prototyper is a simple commandline tool that sets up a basic web application. This gem is designed to get scaffolding a project out of the way. Currently it provides two different project types: HTML and Sinatra. The Sintara installtion provided is good to go on Heroku.

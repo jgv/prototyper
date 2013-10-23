@@ -11,7 +11,7 @@ $:.unshift File.expand_path("../../lib", bin_file)
 require 'prototyper'
 
 options = {}
-options['type'] = :html # set default
+options[:type] = :html # set default
 
 OptionParser.new do |opts|
 
@@ -19,23 +19,25 @@ OptionParser.new do |opts|
 
   opts.on("--type [TYPE]", [:sinatra, :html],
     "Select scaffolding type (sinatra, html). Default is HTML.") do |t|
-    options['type'] = t
+    options[:type] = t
   end
 
   opts.on("--html",
     "Generate HTML scaffolding. Shortcut for --type html") do |t|
-    options['type'] = :html
+    options[:type] = :html
   end
 
   opts.on("--sinatra",
     "Generate Sinatra scaffolding. Shortcut for --type sinatra.") do |t|
-    options['type'] = :sinatra
+    options[:type] = :sinatra
   end
 
 end.parse!
 
 if ARGV.empty?
-  puts "Prototyper requires an arguemnt, which will be the name of your new project directory"
+  puts "Usage: prototyper [project_title] [options]"
+  puts ""
+  puts "Type prototyper --help for more instruction."
 elsif Dir.exists?(Dir.pwd + "/" + ARGV.first)
   puts "That directory already exists."
 else

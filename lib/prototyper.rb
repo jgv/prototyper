@@ -3,9 +3,10 @@ require 'fileutils'
 module Prototyper
   class << self
 
-    def generate(name, opts={})
+    def generate(name, opts={ :type => "html" })
       dir = FileUtils.mkdir(name)
-      FileUtils.cp_r Dir["lib/templates/#{opts[:type].to_s}/*"], dir, :preserve => true, :verbose => true
+      new_dir = "#{Dir.pwd}/#{name}"
+      FileUtils.cp_r Dir["#{Dir.pwd}/lib/templates/#{opts[:type].to_s}/*"], new_dir, :preserve => true, :verbose => true
       puts "done!"
     end
 

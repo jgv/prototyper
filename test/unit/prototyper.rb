@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/pride'
+require 'pathname'
 
 $:.unshift File.dirname(__FILE__) + '/../../lib'
 require 'prototyper'
@@ -50,7 +51,7 @@ class TestHTMLApp < MiniTest::Test
   end
 
   def teardown
-    FileUtils.rm_rf("test_html")
+#    FileUtils.rm_rf("test_html")
   end
 
   def test_that_it_creates_a_project

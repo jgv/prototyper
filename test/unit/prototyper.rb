@@ -16,12 +16,12 @@ class TestSinatraApp < MiniTest::Test
   end
 
   def test_that_it_creates_a_project
-    assert Dir.exists?("test_sinatra")
+    assert Dir.exist?("test_sinatra")
   end
 
   def test_that_it_creates_subdirs
-    assert Dir.exists?("test_sinatra/assets")
-    assert Dir.exists?("test_sinatra/views")
+    assert Dir.exist?("test_sinatra/assets")
+    assert Dir.exist?("test_sinatra/views")
   end
 
   def test_that_it_creates_a_sinatra_app
@@ -55,11 +55,11 @@ class TestHTMLApp < MiniTest::Test
   end
 
   def test_that_it_creates_a_project
-    assert Dir.exists?("test_html")
+    assert Dir.exist?("test_html")
   end
 
   def test_that_it_creates_subdirs
-    assert Dir.exists?("test_html/assets")
+    assert Dir.exist?("test_html/assets")
   end
 
   def test_that_it_creates_necessary_files

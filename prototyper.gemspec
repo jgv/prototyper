@@ -14,5 +14,8 @@ Gem::Specification.new do |s|
   s.test_file = 'test/unit/prototyper.rb'
   s.require_paths = ['lib', 'bin']
   s.executables = ['prototyper']
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'minitest'
 
 end
